@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scientific Calculator</title> 
+    <style>
+        input[type='button']{height: 25px; width: 50px;
+            align-content: center;
+        }
+        div{
+            
+            margin: auto;
+            padding: 35%;
+        }
+        form{
+            border:2px blue solid;
+            
+        }
+    </style>  
+    <script type="text/javascript">
+        function myclick(a){
+            myform.display.value+=a;
+        }
+        function equal(){
+            myform.answer.value = eval(myform.display.value);
+        }
+        function clc(){
+            myform.display.value =' ';
+        }
+    </script>
+</head>
+<body>
+    <h1>Scientific Calculator</h1>
+    <div>
+        <form action="calculation.php" method="post" name="myform">
+            <table>
+                <tr>
+                     <td><input type="text" name="answer" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="display" id=""></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><input type="button" value="7" onclick="myclick('7')"></td>
+                    <td><input type="button" value="8" onclick="myclick('8')" ></td>
+                    <td><input type="button" value="9" onclick="myclick('9')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" onclick="myclick('4')"></td>
+                    <td><input type="button" value="5" onclick="myclick('5')"></td>
+                    <td><input type="button" value="6" onclick="myclick('6')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" onclick="myclick('1')"></td>
+                    <td><input type="button" value="2" onclick="myclick('2')"></td>
+                    <td><input type="button" value="3" onclick="myclick('3')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" onclick="myclick('0')"></td>
+                    <td><input type="button" value="+" onclick="myclick('+')"></td>
+                    <td><input type="button" value="-" onclick="myclick('-')"></td>
+                </tr>
+                <tr> 
+                    <td><input type="button" value="*" onclick="myclick('*')"></td>
+                    <td><input type="button" value="/" onclick="myclick('/')"></td>
+                    <td><input type="button" value="%" onclick="myclick('%')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="!" onclick="myclick('!')"></td>
+                    <td><input type="button" value="^" onclick="myclick('^')"></td>
+                    <td><input type="button" value="AC" onclick="clc()"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="(" onclick="myclick('(')"></td>
+                    <td><input type="button" value=")" onclick="myclick(')')"> </td>
+                    <td><input type="button" value="=" onclick="equal()"></td>
+                </tr>
+               
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+        <a href="index.html">Go To Home!</a>
+        <a href="display.php">See Your operations:</a>
+    </div>
+
+</body>
+</html>

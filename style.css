@@ -1,0 +1,14 @@
+div{
+    background-color: blueviolet;
+    text-align: center;
+    padding: 20px;
+    margin: 50px;
+    border:2px black solid;
+    border-radius: 20%;
+
+}
+a{
+    color:black;
+    font-size: 25px;
+
+}
